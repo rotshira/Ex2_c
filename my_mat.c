@@ -5,7 +5,6 @@
 #include <stdlib.h>
 #define N 10
 
-
 // ***** function A *****
 void  a()
 {
@@ -14,12 +13,10 @@ for (int i = 0; i < N; i++)
 {
     for (int j = 0; j < N; j++)
     {
-        mat[i][j]=scanf("%d",&x);
+        mat[i][j]=scanf("%d ",&x);
     }
 }
-
 }
-
 int C_help(int x, int y){
     int a[N][N];
     for (int i = 0; i < N; i++)
@@ -45,7 +42,6 @@ if (a[x][y]==0)
 return -1;
  return a[x][y];
 }
-
 // // // ***** function B *****
 void b()
 {
@@ -55,13 +51,13 @@ void b()
     if(C_help(i,j)!=0)
        printf("True");  
     else
-        printf("False");
+       printf("False");
 }
-
-int  c(){
+int  c()
+{
    int i,j;
     scanf("%d",&i);
     scanf("%d",&j);
     return C_help(i,j);
 }
-// ***** function C *****
+
