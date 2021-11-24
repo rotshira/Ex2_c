@@ -7,18 +7,16 @@
 
 int main(){ 
     char ch;
-    int ans=0;
     scanf("%c",&ch);
     while(ch != 'D'){
         if(ch =='A')
         a();
         if(ch == 'B')
         b();
-        if(ch == 'C'){
-             ans = c();
-            printf("%d",ans);
-        }
-        
+        if(ch == 'C')
+        {
+         c();  
+        }  
     scanf("%c",&ch);
     }
     return 0;
