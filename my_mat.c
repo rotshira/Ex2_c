@@ -53,11 +53,13 @@ void b()
     else
        printf("False");
 }
-int  c()
+void c()
 {
    int i,j;
     scanf("%d",&i);
     scanf("%d",&j);
-    return C_help(i,j);
+     int a = C_help(i,j);
+     printf("%d",a);
 }
+
 
