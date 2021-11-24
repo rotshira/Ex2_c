@@ -13,7 +13,8 @@ for (int i = 0; i < N; i++)
 {
     for (int j = 0; j < N; j++)
     {
-        mat[i][j]=scanf("%d ",&x);
+        scanf("%d ",&x);
+        mat[i][j]=x;
     }
 }
 }
@@ -26,8 +27,10 @@ int C_help(int x, int y){
             a[i][j] = mat[i][j];
             if(i!=j&&a[i][j]==0)
             {
-                a[i][j]=9999998;
+                a[i][j]=999999;
             }
+            else if(i==j)
+             a[i][j]=0;
         }   
     }
    for (int k = 0; k < N; k++) {
@@ -38,7 +41,7 @@ int C_help(int x, int y){
       }
     }
   }
-if (a[x][y]==0)
+if (a[x][y]==0 || a[x][y]>=999999)
 return -1;
  return a[x][y];
 }
@@ -48,10 +51,10 @@ void b()
     int i,j;
     scanf("%d",&i);
     scanf("%d",&j);
-    if(C_help(i,j)!=0)
-       printf("True");  
+    if(C_help(i,j)!=-1 )
+       printf("True\n");  
     else
-       printf("False");
+       printf("False\n");
 }
 void c()
 {
@@ -59,7 +62,6 @@ void c()
     scanf("%d",&i);
     scanf("%d",&j);
      int a = C_help(i,j);
-     printf("%d",a);
+     printf("%d\n",a);
 }
-
 
